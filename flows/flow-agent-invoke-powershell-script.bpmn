@@ -38,7 +38,7 @@ next();</bpmn:script>
             <camunda:inputParameter name="method">post</camunda:inputParameter>
             <camunda:inputParameter name="query">
               <camunda:map>
-                <camunda:entry key="tag">agent</camunda:entry>
+                <camunda:entry key="tag">test-srv-01</camunda:entry>
                 <camunda:entry key="async">${true}</camunda:entry>
               </camunda:map>
             </camunda:inputParameter>
