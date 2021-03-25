@@ -5,7 +5,7 @@ block append formConfig
 		submitButtonName: "Skicka in återkoppling"
 	})
 	
-	-var ticket = (form.queryparam.ticket) ? form.queryparam.action : "Saknas"
+	-var ticket = (form.queryparam.ticket) ? form.queryparam.ticket : "Saknas"
 	-var category = (form.queryparam.category) ? form.queryparam.category : "Saknas"
 	-var user = (form.queryparam.user) ? form.queryparam.user : "Saknas"
 
