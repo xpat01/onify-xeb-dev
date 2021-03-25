@@ -5,8 +5,12 @@ block append formConfig
 		submitButtonName: "Create mailbox"
 	})
 	
-	-var test = (form.queryparam.action) ? form.queryparam.action : "Saknas"
+	-var ticket = (form.queryparam.ticket) ? form.queryparam.action : "Saknas"
+	-var category = (form.queryparam.category) ? form.queryparam.action : "Saknas"
+	-var user = (form.queryparam.user) ? form.queryparam.action : "Saknas"
 
 block formContent
 
-	p #{test}
+	p Ticket #{ticket}
+	p Category #{category}
+	p User #{user}
