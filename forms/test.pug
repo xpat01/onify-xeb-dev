@@ -1,5 +1,10 @@
 extends ../views/form/default-form
 
 block append formConfig
+	+formOptions({
+		submitButtonName: "Create mailbox"
+	})
+	
+	-var test = (form.queryparam.action) ? form.queryparam.action : "Saknas"
 
 block formContent
