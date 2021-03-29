@@ -1,16 +1,12 @@
 extends ../views/form/default-confirmation-form
 
-block append formContent
-	+formElement({
-		type: "agentTaskSubmitResult",
-		format: "html",
-		loadingText: "Vänligen vänta..."
-	})
+    style.
+        @import url("https://onify.corp.bravida.com/css/public_feedback_form.css");
 
-	+formGroup([{
-		width: 'col-md-1',
-		type: "link",
-		button: true,
-		value: "Startsidan",
-		url: "/"
-	}])
+    br
+    center
+      img(src="https://onify.corp.bravida.com/images/bravida_logo_cmyk_neg.png")
+
+block formContent
+
+    h3 Tack
