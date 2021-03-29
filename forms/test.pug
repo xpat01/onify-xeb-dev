@@ -37,7 +37,11 @@ block formContent
         required: {
             ifField: "op0",
             hasValue: "Nej"
-        }
+        },
+        visible: {
+        ifField: "op0",
+        hasValue: "Ja"
+    }
     })
 
     hr
