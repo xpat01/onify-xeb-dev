@@ -109,13 +109,5 @@ block formContent
     +formElement({
         type: "textarea",
         name: "reason",
-        label: "Övrig kommentar?",
-        required: {
-            ifField: "op0",
-            hasValue: ["Ja"]
-        },
-        visible: {
-            ifField: "op0",
-            hasValue: "Nej"
-    }
+        label: "Övrig kommentar?"
     })
