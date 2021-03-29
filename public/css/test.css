@@ -1,3 +1,97 @@
-body {
-	
-}
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+  body {
+    background-color: #086494 !important;
+    font-family: "Roboto Condensed", sans-serif !important;
+  }
+
+  label {
+    font-family: "Roboto Condensed", sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 100;
+    line-height: 25px !important;
+  }
+
+  .header {
+    display: none !important;
+  }
+
+  .form-content {
+    margin: 0 !important;
+  }
+
+  .container {
+    width: 750px !important;
+  }
+
+  .form-container {
+    padding: 30px 30px 0px 30px !important;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+    background: white;
+    border-radius: 5px;
+  }
+
+  .title-content {
+    display: none;
+  }
+
+  h3 {
+    font-family: "Roboto Condensed", sans-serif !important;
+    font-size: 25px !important;
+    font-weight: 700;
+    text-decoration: underline #eeeeee;
+  }
+
+  button {
+    font-family: "Roboto Condensed", sans-serif !important;
+    font-size: 20px !important;
+  }
+
+  .btn-primary {
+    background-color: #086494 !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 12px !important;
+  }
+
+  .radio-toolbar input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+    cursor: default;
+  }
+
+  .radio-toolbar label:hover {
+    background-color: #dfd;
+    cursor: pointer;
+  }
+
+  .radio-toolbar input[type="radio"]:checked + label {
+    background-color: #bfb;
+    border-color: #4c4;
+  }
+
+  .radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+  .radio-toolbar label {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px 30px !important;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #c7c7c7;
+    border-radius: 4px;
+    margin-top: 10px !important;
+  }
+
+  .radio-toolbar > .radio-inline {
+    text-align: center;
+    width: unset !important;
+    padding: unset !important;
+    margin: unset !important;
+  }
