@@ -23,7 +23,7 @@ block formContent
 
     +formElement({
     type: 'radio',
-    name: 'op0',
+    name: 'recurringFeedback',
     required: true,
     class: 'radio-toolbar',
     options: [
@@ -40,7 +40,7 @@ block formContent
 
     +formElement({
         type: "textarea",
-        name: "reason",
+        name: "recurringFeedbackReason",
         label: "Övrig kommentar?",
         visible: {
             ifField: "op0",
@@ -54,7 +54,7 @@ block formContent
 
     +formElement({
     type: 'radio',
-    name: 'op1',
+    name: 'solutionFeedback',
     required: true,
     class: 'radio-toolbar',
     options: [
@@ -87,7 +87,7 @@ block formContent
 
     +formElement({
     type: 'radio',
-    name: 'op2',
+    name: 'satisfactionFeedback',
     required: true,
     class: 'radio-toolbar',
     options: [
@@ -116,7 +116,7 @@ block formContent
     
     +formElement({
         type: "textarea",
-        name: "reason",
+        name: "satisfactionFeedbackReason",
         label: "Övrig kommentar?"
     })
     
