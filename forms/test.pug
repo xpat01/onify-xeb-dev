@@ -1,17 +1,33 @@
 extends ../views/form/default-form
 
 block append formConfig
-	+formOptions({
-		submitButtonName: "Skicka in återkoppling",
-		hideBackButton: true
-	})
-	
-	-var ticket = (form.queryparam.ticket) ? form.queryparam.ticket : "Saknas"
-	-var category = (form.queryparam.category) ? form.queryparam.category : "Saknas"
-	-var user = (form.queryparam.user) ? form.queryparam.user : "Saknas"
+    +formOptions({
+        submitButtonName: "Skicka in återkoppling",
+        hideBackButton: true
+    })
+    
+    -var ticket = (form.queryparam.ticket) ? form.queryparam.ticket : "Saknas"
+    -var category = (form.queryparam.category) ? form.queryparam.category : "Saknas"
+    -var user = (form.queryparam.user) ? form.queryparam.user : "Saknas"
 
 block formContent
 
-	p Ticket #{ticket}
-	p Category #{category}
-	p User #{user}
+    p Ticket #{ticket}
+    p Category #{category}
+    p User #{user}
+    
+    +formElement({
+    type: 'radio',
+    name: 'radio',
+    selected: 'Option 1',
+    options: [
+        {
+            value: 'o1',
+            label: 'Option 1'
+        },
+        {
+            value: 'o2',
+            label: 'Option 2'
+        }
+    ]
+})
