@@ -1,6 +1,9 @@
 /*
     Denna CSS fil används enbart som custom form för public.
+    Skapad 2021-03-26
 */
+
+/* Importerar font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 body {
@@ -15,18 +18,20 @@ label {
   line-height: 25px !important;
 }
 
+/* Döljer "navigationsbar" */
 .header {
   display: none !important;
-}
-
-.form-content {
-  margin: 0 !important;
 }
 
 .container {
   width: 750px !important;
 }
 
+.form-content {
+  margin: 0 !important;
+}
+
+/* Sätter skugga på form-container */
 .form-container {
   padding: 30px 30px 0px 30px !important;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -37,10 +42,12 @@ label {
   border-radius: 5px;
 }
 
+/* Döljer "title" */
 .title-content {
   display: none;
 }
 
+/* Ändrar rubrikfont och text */
 h3 {
   font-family: "Roboto Condensed", sans-serif !important;
   font-size: 25px !important;
@@ -48,6 +55,7 @@ h3 {
   text-decoration: underline #eeeeee;
 }
 
+/* Ändrar knappen */
 button {
   font-family: "Roboto Condensed", sans-serif !important;
   font-size: 20px !important;
@@ -60,6 +68,7 @@ button {
   padding: 12px !important;
 }
 
+/* Bygger om radiobuttons från klassiska till feedback anpassade */
 .radio-toolbar input[type="radio"]:focus + label {
   border: 2px dashed #444;
   cursor: default;
@@ -92,6 +101,7 @@ button {
   margin-top: 10px !important;
 }
 
+/* Tar bort vissa inställningar för radio-inline */
 .radio-toolbar > .radio-inline {
   text-align: center;
   width: unset !important;
