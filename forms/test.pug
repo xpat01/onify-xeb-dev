@@ -1,17 +1,135 @@
-extends ../views/form/default-confirmation-form
+extends ../views/form/default-form
 
-block append formContent
+block append formConfig
+    +formOptions({
+        submitButtonName: "Skicka in återkoppling",
+        hideBackButton: true
+    })
+
+    -var id = (form.queryparam.id) ? form.queryparam.id : "Saknas"
+    -var category = (form.queryparam.category) ? form.queryparam.category : "Saknas"
+    -var user = (form.queryparam.user) ? form.queryparam.user : "Saknas"
 
     style.
         @import url("http://onify.xeb.se:3000/css/feedback_public.css");
-        .row {
-        margin-top: 40px;
-        }
 
     br
-
     center
-      h3 Tack för att du hjälper oss bli bättre!
-      p Mvh <br /> Bravida IT Service Desk
-      
-    br
+        img(src="http://onify.xeb.se:3000/images/bravida_logo_cmyk_neg.png")
+
+block formContent
+
+    table
+        tr
+            td <strong>Id</strong>
+            td #{id}
+        tr
+            td <strong>Category</strong>
+            td #{category}
+        tr
+            td <strong>User</strong>
+            td #{user}
+    hr
+
+    h3 Har just detta ärende varit ett återkommande problem för dig?
+
+    +formElement({
+    type: 'radio',
+    name: 'recurringFeedback',
+    required: true,
+    class: 'radio-toolbar',
+    options: [
+        {
+            value: 'Ja',
+            label: 'Ja'
+        },
+        {
+            value: 'Nej',
+            label: 'Nej'
+        }
+        ]
+    })
+
+    +formElement({
+        type: "textarea",
+        name: "recurringFeedbackReason",
+        label: "Övrig kommentar?",
+        visible: {
+            ifField: "recurringFeedback",
+            hasValue: "Ja"
+    }
+    })
+
+    hr
+
+    h3 Hur nöjd är du med lösningen på ditt ärende?
+
+    +formElement({
+    type: 'radio',
+    name: 'solutionFeedback',
+    required: true,
+    class: 'radio-toolbar',
+    options: [
+        {
+            label: '★ 1',
+            value: '1'
+        },
+        {
+            label: '★ 2',
+            value: '2'
+        },
+        {
+            label: '★ 3',
+            value: '3'
+        },
+        {
+            label: '★ 4',
+            value: '4'
+        },
+        {
+            label: '★ 5',
+            value: '5'
+        }
+        ]
+    })
+
+    hr
+
+    h3 Hur skulle du bedöma bemötandet under ärendets gång?
+
+    +formElement({
+    type: 'radio',
+    name: 'satisfactionFeedback',
+    required: true,
+    class: 'radio-toolbar',
+    options: [
+        {
+            label: '♥ 1',
+            value: '1',
+        },
+        {
+            label: '♥ 2',
+            value: '2'
+        },
+        {
+            label: '♥ 3',
+            value: '3'
+        },
+        {
+            label: '♥ 4',
+            value: '4'
+        },
+        {
+            label: '♥ 5',
+            value: '5'
+        }
+        ]
+    })
+
+    +formElement({
+        type: "textarea",
+        name: "satisfactionFeedbackReason",
+        label: "Övrig kommentar?"
+    })
+
+    hr
