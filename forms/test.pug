@@ -39,10 +39,7 @@ block formContent
         type: "textarea",
         name: "reason",
         label: "Övrig kommentar?",
-        required: {
-            ifField: "op0",
-            hasValue: ["Ja"]
-        },
+        required: true,
         visible: {
             ifField: "op0",
             hasValue: "Ja"
