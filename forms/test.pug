@@ -14,6 +14,24 @@ block formContent
 
     +formElement({
     type: 'radio',
+    name: 'op0',
+    label: 'Har just detta ärende varit ett återkommande problem för dig?',
+    required: true,
+    selected: 'Nej',
+    options: [
+        {
+            value: 'Ja',
+            label: 'Ja'
+        },
+        {
+            value: 'Nej',
+            label: 'Nej'
+        }
+        ]
+    })
+
+    +formElement({
+    type: 'radio',
     name: 'op1',
     label: 'Hur nöjd är du med lösningen på ditt ärende?',
     required: true,
