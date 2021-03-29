@@ -36,7 +36,7 @@ block formContent
         label: "Övrig kommentar?",
         required: {
             ifField: "op0",
-            hasValue: ["Nej"]
+            hasValue: ["Ja"]
         },
         visible: {
             ifField: "op0",
@@ -50,6 +50,37 @@ block formContent
     type: 'radio',
     name: 'op1',
     label: 'Hur nöjd är du med lösningen på ditt ärende?',
+    required: true,
+    options: [
+        {
+            value: '1',
+            label: '1'
+        },
+        {
+            value: '2',
+            label: '2'
+        },
+        {
+            value: '3',
+            label: '3'
+        },
+        {
+            value: '4',
+            label: '4'
+        },
+        {
+            value: '5',
+            label: '5'
+        }
+        ]
+    })
+
+    hr
+
+    +formElement({
+    type: 'radio',
+    name: 'op2',
+    label: 'Hur skulle du bedöma bemötandet under ärendets gång?',
     required: true,
     options: [
         {
