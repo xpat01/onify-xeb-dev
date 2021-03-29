@@ -16,10 +16,11 @@ block append formConfig
 
 block formContent
 
+    h3 Har just detta ärende varit ett återkommande problem för dig?
+
     +formElement({
     type: 'radio',
     name: 'op0',
-    label: 'Har just detta ärende varit ett återkommande problem för dig?',
     required: true,
     selected: 'Nej',
     options: [
@@ -50,7 +51,7 @@ block formContent
 
     hr
 
-    h1 Hur nöjd är du med lösningen på ditt ärende?
+    h3 Hur nöjd är du med lösningen på ditt ärende?
 
     +formElement({
     type: 'radio',
