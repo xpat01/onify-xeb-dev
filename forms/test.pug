@@ -29,11 +29,15 @@ block formContent
         }
         ]
     })
-    
+
     +formElement({
         type: "textarea",
         name: "reason",
-        label: "Övrig kommentar?"
+        label: "Övrig kommentar?",
+        required: {
+            ifField: "op0",
+            hasValue: 'Ja'
+        }
     })
 
     hr
